@@ -5,21 +5,12 @@ from decouple import config
 
 url = URL.create(
     drivername="postgresql",
-    username="postgres",
-    password="Admin123",  # plain (unescaped) text
+    username="<INSERT ADMIN USERNAME>",
+    password="<INSERT ADMIN PASSWORD>",  # plain (unescaped) text
     host="localhost",
     database="mydb",
     port=5432
 )
-
-# url = URL.create(
-    # drivername="postgresql",
-    # username=="postgres",
-    # password="Admin123",
-    # host="localhost",
-    # database="mydb",
-    # port=5432
-# )
 
 engine = create_engine(url)
 SessionLocal = sessionmaker(bind=engine)
