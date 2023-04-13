@@ -12,10 +12,7 @@ from utils import send_message, logger
 
 app = FastAPI()
 # Set up the OpenAI API client
-openai.api_key = "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"
-
-# removed hard coded number
-# whatsapp_number = '+447846200468'
+openai.api_key = "<INSERT OPEN API KEY>"
 
 # Dependency
 def get_db():
