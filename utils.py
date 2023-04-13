@@ -8,10 +8,10 @@ from decouple import config
 
 # Find your Account SID and Auth Token at twilio.com/console
 # and set the environment variables. See http://twil.io/secure
-account_sid = 'ACd0600ab1a36f36de17451cb57cd9cb68'
-auth_token = 'd838b8016d9d978fa856d7bb960ab50c'
+account_sid = '<INSERT TWILIO ACCOUNT SID>'
+auth_token = '<INSERT TWILIO AUTH TOKEN>'
 client = Client(account_sid, auth_token)
-twilio_number = '+14155238886'
+twilio_number = '<INSERT TWILIO NUMBER>'
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
