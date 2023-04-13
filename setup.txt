@@ -1,0 +1,34 @@
+# open anaconda app in a window and paste the following commands
+
+# navigates to the correct directory
+cd c:\python\chatgpt_whatsapp\
+
+# installs required libraries
+pip install flask
+pip install fastapi
+pip install uvicorn
+pip install twilio
+pip install openai
+pip install python-decouple
+pip install sqlalchemy
+pip install psycopg2-binary
+pip install python-multipart
+pip install pyngrok
+
+#start database
+In services check postgresql-x64-15 is runnning
+
+# sets up table in database
+python models.py
+
+# execute python script & start backend app service
+python main.py
+uvicorn main:app --reload
+
+#starting front end servers that routes requests to backend
+# run ngrok.exe and type following command
+ngrok http 8000
+
+# go to twilio console > Messaging > Send a whatsapp message > sandblox settings
+# in the When a message comes in add the ngrok forwarding url suffixed with /message
+# e.g https://2f9a-82-13-211-11.eu.ngrok.io/message
